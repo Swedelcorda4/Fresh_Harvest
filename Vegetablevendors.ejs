@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Fresh Harvest</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <script type="text/javascript">
+		$(document).ready(function(){
+
+			$( "#form1" ).submit(function(event) {
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/',
+					data: $('#form1').serialize(),
+					dataType: "json",
+					success: function(response){
+						//alert("a");
+						//console.log(response.Success);
+						$('#form1')[0].reset();
+
+						document.getElementById("check").innerHTML=response.Success;
+         					//ADD THIS CODE
+         					setTimeout(function(){
+         						document.getElementById("check").innerHTML="";
+         					},3000);
+         					if (response.Success=="You are regestered,You can login now.") {
+         						document.getElementById("aa").click();
+         					};
+         				},
+         				error: function() {
+         				}
+         			})
+			});
+		});
+	</script>
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo1.png" width="300" height="50" alt="" /><span>
+              Fresh Harvest
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="vvtoindex">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Vegetablevendors"> Vegetable Vendors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact">Contact us</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+            <!--div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="">
+                Get A quote
+              </a>
+            </div-->
+
+            <form>
+              <label for="Search"></label>
+              <input type="text" id="search" name="name">
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+  <!-- fruits section -->
+  <!--div style="background-color: #CCCCFF;"-->
+    
+  <section class="fruit_section layout_padding-top">
+    <div class="container">
+      <h2 class="custom_heading">Fresh Groceries</h2>
+      <p class="custom_heading-text">
+        These are list of local vegetable vendors available 
+      </p>
+      <section class="benefits-section">
+        <div class="container">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1JvfAqz2gMzr2pD50DO0tcghr6Xx3JIw&ehbc=2E312F" width="100%" height="480"></iframe>
+        </div>
+      </section>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              <b>Call Veg</b>
+              <br>
+              Chikuwadi, Borivali(west).
+
+            </h3>
+            <p class="mt-4 mb-5">
+              This <i>kirana</i> or grocery store is one of the 
+              <br>
+              most popular grocery stores.
+              <br>
+              It  contains items from fresh fruits & vegetables,
+              <br>
+              to wholesale diary products.
+              
+
+            </p>
+            <div>
+              <a href="enquirenow" class="custom_dark-btn">
+                Enquire Now
+              </a>
+            </div><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2201.0832837252933!2d72.83811364793026!3d19.220664467311373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e422965de5%3A0xb64645f49870c1b!2sCALL%20VEG!5e0!3m2!1sen!2sin!4v1667041717931!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <a href="Call_veg" target="_blank">
+            <img src="images/callveg2.jpg" width = 600 alt="" class="" width="250px" height="500px" />
+          </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+             <b>Churchway Fruit And Vegetable Shop</b> 
+             <br>
+            I C colony Borivali(west).
+            </h3>
+            <p class="mt-4 mb-5">
+              Churchway Fruit And Vegetable Shopin Mumbai is one of the <br>
+              leading businesses in the Vegetable Vendors. <br>
+              Also known for Vegetable Vendors, Fruit Vendors, Vegetable Home <br>
+              Delivery Services,Fruit Home Delivery Services, Raw Papaya Dealers and <br>much more. 
+               Find Address, Contact Number, Reviews & Ratings, Photos <br>of Churchway Fruit And Vegetable Shop, Mumbai.
+            </p>
+            <div>
+              <a href="churchwayenquirenow" class="custom_dark-btn">
+                Enquire Now
+              </a>
+            </div><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.8242092496853!2d72.84887991482455!3d19.246491586990352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b11e2cb8954d%3A0xe086a093ce50b707!2sChurchway%20Fruits%20%26%20Vegetables!5e0!3m2!1sen!2sin!4v1667042851711!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <a href="Churchway.html" target="_blank">
+            <img src="images/churchway1.jpg" width="350" alt="" class="" width="100px" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2-top layout_padding-bottom">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+             <b>Phoolman Fruit and Vegetable Shop</b> 
+             <br>
+             J P road, Andheri(west).
+            </h3>
+            <p class="mt-4 mb-5">
+              Phoolman Fruit and Vegetable Vendor in Mumbai is one of <br> the leading businesses in the Banana Fruit Vendors. <br>
+              Also known for Vegetable Vendors, Vegetable Home Delivery <br>Services, Fruit Vendors, Mango Retailers,
+               Alphonso Mango<br> Retailers, Fruit Suppliers, Fruit Home Delivery Services, Fruit<br> Retailers and much more. Find Address, Contact Number, <br>Reviews & Ratings, Photos, 
+               of Phoolman Fruit and Vegetable <br>Vendor, Mumbai.
+            </p>
+            <div>
+              <a href="phoolmanenquirenow" class="custom_dark-btn">
+            Enquire Now
+              </a>
+            </div><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5219157854026!2d72.81443741482272!3d19.12861828705779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b73fc90d62b7%3A0xbe3bbc9003a326b3!2sPHOOLMAN%20FRUIT%20VENDAR!5e0!3m2!1sen!2sin!4v1667043025473!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <a href="Phoolman.html" target="_blank">
+            <img src="images/phoolman.jpg" width="550"height="500" alt="" class="" width="250px" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+               <b>  Harendra  Fruit And Vegetable Shop</b> 
+               <br>
+                  Mira Bhayandar
+            </h3>
+            <p class="mt-4 mb-5">
+              Harendra Vegetables And Fruits in Thane, Mumbai is one of the leading businesses in the Vegetable Vendors.
+               <br>
+               Also known for Vegetable Vendors, Vegetable Wholesalers and much more.
+               <br>
+                Find Address, Contact Number, Reviews & Ratings, Photos of Harendra Vegetables 
+                <br>
+                And Fruits, Thane, Mumbai.
+              
+            </p>
+            <div>
+              <a href="harendraenquirenow" class="custom_dark-btn">
+                Enquire Now
+              </a>
+            </div><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240981.88595022674!2d72.76319784847433!3d19.3109617534394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b18966244cdb%3A0xa08ec619603b0a73!2sHarendra%20Vegetables%20%26%20Fruits%20Wholesales%20%26%20Retails!5e0!3m2!1sen!2sin!4v1667043162484!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <a href="Harendra.html" target="_blank">
+            <img src="images/harendra1.jpg" width="550" height="500" alt="" class="" width="100px" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+               <b>  R J Organic  Fruit And Vegetable Shop</b> 
+               <br>
+                  Marine Drive, Mumbai
+            </h3>
+            <p class="mt-4 mb-5">
+              R J Organic in Mumbai. 
+              It is an effortless task in commuting to this establishment as <br>
+              there are various modes of transport readily available
+              Vegetable Vendors with <br>Address,
+              Contact Number, Photos.View  R  J Organic, Mumbai on Justdial.
+            </p>
+            <div>
+              <a href="rjorganicenquirenow" class="custom_dark-btn">
+                Enquire Now
+              </a>
+            </div><br>
+            <section class="benefits-section">
+              <div class="container">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C443CwemkMiNnS-7tMpcZC-H0xAbKTY&ehbc=2E312F" width="640" height="480"></iframe>
+              </div>
+            </section>
+            
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <a href="Rjorganic.html" target="_blank">
+            <img src="images/rjorganic.jpeg" width="550" height="500" alt="" class="" width="100px" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+               <b>  Nandu Vegetables Shop</b> 
+               <br>
+                  Bandra(west).
+            </h3>
+            <p class="mt-4 mb-5">
+              Nandu Vegetables Shop Direct From Farm in Mumbai is one of the leading businesses,<br>
+               in the Vegetable Home Delivery Services. Also known for Vegetable <br>Home Delivery Services, Vegetable Vendors,
+                Fruit Vendors, Fruit Home Delivery <br>Services, <br>Exotic Vegetable Retailers and much more. <br>
+                Find Address, Contact Number, Reviews & Ratings,<br> Photos of Nandu Vegetables Shop Direct From Farm, Mumbai.
+            </p>
+            <div>
+              <a href="nanduenquirenow" class="custom_dark-btn">
+                Enquire Now
+              </a>
+            </div><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.19483410146!2d72.82776311482166!3d19.05516948709984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c96e0a388617%3A0x9d9723d35818c0!2sNandu&#39;s%20Vegetables%20%26%20Foodmart!5e0!3m2!1sen!2sin!4v1667043769624!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <a href="Nandu.html" target="_blank">
+            <img src="images/nandu1.jpg" width="550" height="500" alt="" class="" width="100px" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+  <!-- end fruits section -->
+
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+           Vegetable vendors
+          </h5>
+          <ul>
+            <li>
+              It consists the details of local
+            </li>
+            <li>
+              vegetable vendors. You can also
+            </li>
+            <li>
+              view new products ,
+            </li>
+            <li>
+              sold products, products in
+            </li>
+            <li>
+              demands in respective shops.
+            </li>
+            <li>
+              You can place your order in any
+            </li>
+            <li>
+              local vending shop
+            </li>
+            <li>
+              and also repeat your order.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Services
+          </h5>
+          <ul>
+            <li>
+              It contains the details of
+            </li>
+            <li>
+              foodgrains,diary products,
+            </li>
+            <li>
+              bakery items
+            </li>
+            <li>
+              and other products.
+            </li>
+            <li>
+              It gives the information about
+            </li>
+            <li>
+              different products in various
+            </li>
+            <li>
+              categories . It also gives
+            </li>
+            <li>
+              notification of new
+              products in the shops.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Groceries
+          </h5>
+          <ul>
+            <li>
+              It contains
+            </li>
+            <li>
+              a list of
+            </li>
+            <li>
+              available products
+            </li>
+            <li>
+              such as 
+            </li>
+            <li>
+              food grains like
+            </li>
+            <li>
+              rice,dal,pulses,wheat,
+            </li>
+            <li>
+              dairy products.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="social_container">
+            <h5>
+              Follow Us
+            </h5>
+            <div class="social-box">
+              <a href="https://www.facebook.com/login/">
+                <img src="images/fb.png" alt="">
+              </a>
+
+              <a href="https://twitter.com/i/flow/login">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="https://www.linkedin.com/login">
+                <img src="images/linkedin.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/accounts/login/">
+                <img src="images/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="subscribe_container">
+            <h5>
+              Subscribe Now
+            </h5>
+            <div class="form_container">
+              <form action="">
+                <input type="email">
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+     <!---- Copyright &copy; 2019 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>-->
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+    // Australia.
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+      });
+
+      var image = 'images/maps-and-flags.png';
+      var beachMarker = new google.maps.Marker({
+        position: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+  </script>
+  <!-- end google map js -->
+</body>
+
+</html>

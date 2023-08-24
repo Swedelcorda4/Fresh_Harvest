@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churchway</title>
+
+
+    <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+          margin: 0;
+          background-color: rgb(145, 194, 245);
+      }
+
+      header {
+          padding: 4px 2px 2px 2px;
+          display: flex;
+          flex-wrap: wrap;
+          background-color: aquamarine;
+          border-bottom: 4px solid green;
+          height: 130px;
+      }
+
+      header h1 {
+          width: 60%;
+          margin: auto;
+          text-align: center;
+          color: rgb(0, 107, 20);
+          font-weight: 900;
+          font-size: 40px;
+      }
+
+      header img {
+          height: 100%;
+      }
+
+
+      .button {
+border: none;
+  color: lightblue;
+  padding: 2px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+
+}
+
+.button {background-color: #4CAF50;} /* Green */
+  </style>
+</head>
+
+<body>
+  <header>
+      <!--img src="images/sgnpLogo.png" alt="sgnpLogo"-->
+      <h1 id="hd">Churchway Store</h1>
+      <form method="get" action="payment.html">
+        <button id="pay" type="submit">Payment</button>
+        </form>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </header>
+
+
+
+
+
+    <!--bootstrap core css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link href="css/callveg.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style1.css">
+  
+</head>
+<body>
+  <img id="bg" src="images/churchway1.jpg" width="100%">
+<br>
+<br>
+  <div class="content">
+    <h2 style="color: rgb(0, 0, 0); text-align: center;"><b>Welcome to Churchway Store</b></h2>
+    <div class="hover-content" style="display: flex;flex-wrap:wrap;">
+        <!--a href="Call_veg.html">
+            <p style="background-image: url('images/Call_veg.png');">
+                <b></b>
+            </p>
+        </a-->
+</div>
+<form>
+  <!--p> Products</p-->
+  <fieldset style="background-color: linen;">
+    <legend style="font-size: 25px; font-style: italic;">Vendor Details</legend>
+  <h4><b>Vendor's Name: </b>Kunal</h4>
+  <br>
+  <h4><b>Address</b> - IC Colony Borivali(W)</h4>
+  <br>
+  <h4><b>Phone number:</b>9876543210</h4><br>
+  <h4><b>Email-ID:</b>churchway234@gmail.com</h4>
+  
+  </fieldset>
+  <br>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!--div>
+  <div class="topview">
+    <div class="seen">TOP DEALS</div>
+    <a href="">View All</a>
+  </div>
+
+  <div class="closeupsurf">
+    <div>
+      <div>
+        <img
+          src="images/Ladyfinger.png" width="150px" height="150"
+          alt=""
+        />
+      </div>
+      <div class="allinfo">
+        <span>Lady Finger  </span>
+       
+
+        
+       
+        <div class="price">&#8377; 100</div>
+        
+        <span class="mrp">M.R.P: </span> 
+        <span class="lined"> &#8377; 120.00</span> 
+        <br />
+        <span class="save">Save &#8377; 20.00 </span>
+        <br />
+        <button>
+          <span> Add to Cart</span>
+          <span class="add"></span>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <img
+          src="images/cabbage.png" width="150px" height="150"
+          alt=""
+        />
+      </div>
+      <div class="allinfo">
+        <span>Cabbage  </span>
+    
+        
+       
+        <div class="price">&#8377; 89.00</div>
+        
+        <span class="mrp">M.R.P: </span> 
+        <span class="lined"> &#8377; 120.00</span> 
+        <br />
+        <span class="save">Save &#8377; 31.00 </span>
+        <br />
+        <button>
+          <span> Add to Cart</span>
+          <span class="add"></span>
+        </button>
+      </div>
+      </div>
+
+      <div>
+        <div>
+          <img
+            src="images/potato.png" width="150px" height="150"
+            alt=""
+          />
+        </div>
+        <div class="allinfo">
+          <span>Potato  </span>
+         
+          
+         
+          <div class="price">&#8377; 80</div>
+          
+          <span class="mrp">M.R.P: </span> 
+          <span class="lined"> &#8377; 100.00</span> 
+          <br />
+          <span class="save">Save &#8377; 20.00 </span>
+          <br />
+          <button>
+            <span> Add to Cart</span>
+            <span class="add"></span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <img
+            src="images/Tomato.png" width="150px" height="150"
+            alt=""
+          />
+        </div>
+        <div class="allinfo">
+          <span>Tomato </span>
+         
+          
+         
+          <div class="price">&#8377; 90</div>
+          
+          <span class="mrp">M.R.P: </span> 
+          <span class="lined"> &#8377; 100.00</span> 
+          <br />
+          <span class="save">Save &#8377; 10.00 </span>
+          <br />
+          <button>
+            <span> Add to Cart</span>
+            <span class="add"></span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <img
+            src="images/onion.png" width="150px" height="150"
+            alt=""
+          />
+        </div>
+        <div class="allinfo">
+          <span>Onion</span>
+         
+ 
+          
+         
+          <div class="price">&#8377; 60</div>
+          
+          <span class="mrp">M.R.P: </span> 
+          <span class="lined"> &#8377; 120.00</span> 
+          <br />
+          <span class="save">Save &#8377; 60.00 </span>
+          <br />
+          <button>
+            <span> Add to Cart</span>
+            <span class="add"></span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <img
+            src="images/carrot.png" width="150px" height="150"
+            alt=""
+          />
+        </div>
+        <div class="allinfo">
+          <span>Carrot</span>
+         
+        
+          <div class="price">&#8377; 54.00</div>
+          
+          <span class="mrp">M.R.P: </span> 
+          <span class="lined"> &#8377; 80.00</span> 
+          <br />
+          <span class="save">Save &#8377; 26.00 </span>
+          <br />
+          <button>
+            <span> Add to Cart</span>
+            <span class="add"></span>
+          </button>
+        </div>
+      </div>
+
+          </div>
+        </div-->
+
+        <!--Add to cart-->
+
+        <section class="container content-section">
+          <h2 class="section-header">Top Deals</h2>
+          <div class="shop-items">
+              <div class="shop-item">
+                  <span class="shop-item-title">Ladyfinger</span>
+                  <img class="shop-item-image" src="images/Ladyfinger.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$15</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+              <div class="shop-item">
+                  <span class="shop-item-title">Cabbage</span>
+                  <img class="shop-item-image" src="images/cabbage.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$120</span>
+                      <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                  </div>
+              </div>
+              <div class="shop-item">
+                  <span class="shop-item-title">Potato</span>
+                  <img class="shop-item-image" src="images/potato.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$80</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+              <div class="shop-item">
+                  <span class="shop-item-title">Tomato</span>
+                  <img class="shop-item-image" src="images/Tomato.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$19.99</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="container content-section">
+          <h2 class="section-header"></h2>
+          <div class="shop-items">
+              <div class="shop-item">
+                  <span class="shop-item-title">Onion</span>
+                  <img class="shop-item-image" src="images/onion.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$19.99</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+              <div class="shop-item">
+                  <span class="shop-item-title">Carrot</span>
+                  <img class="shop-item-image" src="images/carrot.png">
+                  <div class="shop-item-details">
+                      <span class="shop-item-price">$6.99</span>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="container content-section">
+          <h2 class="section-header">CART</h2>
+          <div class="cart-row">
+              <span class="cart-item cart-header cart-column">ITEM</span>
+              <span class="cart-price cart-header cart-column">PRICE</span>
+              <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+          </div>
+          <div class="cart-items">
+          </div>
+          <div class="cart-total">
+              <strong class="cart-total-title">Total</strong>
+              <span class="cart-total-price">$</span>
+          </div>
+          <button class="btn btn-primary btn-purchase" type="button"
+          onclick="location.href='payment'">PURCHASE</button>
+      </section>
+
+      
+
+
+
+  
+  
+      <br>
+      <fieldset>
+        <legend></legend>
+      <br><h2 style="font-size: 22px;"><b id="wh">Working Hours</b></h2>
+      <ul>
+        <li id="de">-Monday 9:00am-12:30pm</li>
+        <li id="de">-Tuesday 9:00am-12:30am</li>
+        <li id="de">-Wednesday 9:00am-12:30am</li>
+        <li id="de">-Thursday 9:00am-12:30am</li>
+        <li id="de">-Friday 9:00am-12:30am</li>
+        <li id="de">-Saturday 11:00am-3pm</li>
+        <li id="de">-Sunday 11:00am-3pm</li>
+        
+      </ul>
+      </fieldset> 
+
+
+<script src="store.js"></script>
+<script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

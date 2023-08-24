@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/registration.css">
+
+	
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+
+			$( "#form1" ).submit(function(event) {
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/',
+					data: $('#form1').serialize(),
+					dataType: "json",
+					success: function(response){
+						//alert("a");
+						//console.log(response.Success);
+						$('#form1')[0].reset();
+
+						document.getElementById("check").innerHTML=response.Success;
+         					//ADD THIS CODE
+         					setTimeout(function(){
+         						document.getElementById("check").innerHTML="";
+         					},3000);
+         					if (response.Success=="You are regestered,You can login now.") {
+         						document.getElementById("aa").click();
+         					};
+         				},
+         				error: function() {
+         				}
+         			})
+			});
+		});
+	</script>
+</head>
+<body>
+	
+	<!--Desing of Registration page-->
+	
+    <div class="form-box">
+
+		<div>
+			<p>Register Now
+			</p>
+		</div>
+		<div class="">
+			<form id="form1" method="post">
+				<input type="email" id="fg"  name="email" placeholder="E-mail" required="" class="form-control"><br/>
+				<input type="text" id="fg" name="username" placeholder="Username" required="" class="form-control"><br/>
+				<input type="password" id="fg"name="password" placeholder="Password" required="" class="form-control"><br/>
+				<input type="password" id="fg"name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
+				<input type="submit" id="gg" value="Register" class="btn btn-success">
+			</form>
+		</div>
+		
+		<div class="mssg bg-danger">
+			<span id="check"></span>
+		</div>
+		<div>
+			<br>
+			<span>Already Registered! <a href="/login">Login</a></span>
+		</div>
+		<div id="LangTable"><a href="/login" id="aa"></a>
+		</div>
+	</div>
+
+    
+</body>
+</html>
